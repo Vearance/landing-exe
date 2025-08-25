@@ -2,7 +2,7 @@ import localFont from 'next/font/local';
 import { Geist, Poppins, Inter } from "next/font/google";
 
 export const geistSans = Geist({
-    variable: "--font-geist-sans",
+    variable: '--font-geist-sans',
     subsets: ["latin"],
 });
 
