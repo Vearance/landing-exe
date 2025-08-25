@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   // TODO: assets link, twitter site, etc.
   twitter: {
     card: "summary_large_image",
-    site: "@PathlyApp",
+    site: "@LandingAI",
     creator: "@Vearance",
     title: "Landing AI :: a piowseeAI creation",
     description:
@@ -94,7 +94,7 @@ export default function RootLayout({
           poppins.variable,
           inter.variable,
           sfpro.variable,
-          geistSans.className,
+          sfpro.className,
           'font-normal antialiased',
         )}
       >
