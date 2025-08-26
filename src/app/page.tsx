@@ -5,7 +5,12 @@ import { SocialProof } from "@/components/main-page/social-proof";
 
 export default function Home() {
   return (
-    <main className="bg-neutral-100 bg-[radial-gradient(circle_at_top,rgba(221,214,254,0.3)_0%,rgba(221,214,254,0)_40%)] min-h-screen text-foreground">
+    <main className="relative min-h-screen text-foreground">
+      <div className="absolute inset-0 -z-10 h-full w-full">
+        <div className="absolute inset-0 bg-violet-100 bg-[radial-gradient(ellipse_at_center,transparent_40%,theme(colors.neutral.100))] dark:bg-neutral-900 dark:bg-[radial-gradient(ellipse_at_center,transparent_40%,theme(colors.neutral.900))]"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(theme(colors.neutral.300)_1px,transparent_1px)] bg-size-[20px_20px] dark:bg-[radial-gradient(theme(colors.neutral.700)_1px,transparent_1px)]"></div>
+      </div>
+
       <Header />
       <Hero />
       <SocialProof />

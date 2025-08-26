@@ -1,6 +1,5 @@
 import Link from "next/link";
-import Image from "next/image";
-import { ChevronRight, Star } from "lucide-react";
+import { ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export function Hero() {

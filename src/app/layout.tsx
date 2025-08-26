@@ -5,16 +5,16 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: {
-    template: ``,
-    default: "Landing AI :: a piowseeAI creation",
+    template: `%s | LandingAI`,
+    default: "LandingAI :: a piowsee creation",
   },
   description:
-    "Official Website of Landing AI.",
+    "Official Website of LandingAI.",
   keywords: [
     "Landing AI",
   ],
   authors: [{ name: "Vearance", url: process.env.NEXT_BASE_URL }],
-  applicationName: "Landing AI",
+  applicationName: "LandingAI",
   creator: "Vearance",
   publisher: "piowseeAI",
 
