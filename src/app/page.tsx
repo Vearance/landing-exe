@@ -1,7 +1,7 @@
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
-import { Hero } from "@/components/hero";
-import { SocialProof } from "@/components/social-proof";
+import { Hero } from "@/components/main-page/hero";
+import { SocialProof } from "@/components/main-page/social-proof";
 
 export default function Home() {
   return (
