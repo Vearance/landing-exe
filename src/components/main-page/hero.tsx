@@ -20,7 +20,7 @@ export function Hero() {
             <div className="flex flex-col items-center gap-4 sm:flex-row">
                 <Button size="lg" className="group" asChild>
                     <Link href="/signup">
-                        Get Started - it's free
+                        Get Started - it&apos;s free
                         <ChevronRight className="transform rotate-45 transition-all duration-300 group-hover:translate-x-1 group-hover:-translate-y-1 w-3 h-3 sm:w-4 sm:h-4" />
                     </Link>
                 </Button>

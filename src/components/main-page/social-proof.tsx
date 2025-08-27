@@ -11,11 +11,15 @@ export function SocialProof() {
                     <Image src="/images/user.png" alt="2" width={40} height={40} className="rounded-full border-2 border-background" />
                     <Image src="/images/user.png" alt="3" width={40} height={40} className="rounded-full border-2 border-background" />
 
-                    <Link href="/signup" className="group flex h-10 w-10 items-center justify-center rounded-full border-2 border-background bg-foreground text-background transition-all duration-300 ease-in-out hover:w-32">
-                        <span className="text-xl font-bold group-hover:hidden">
-                            <Plus className="h-4 w-4"/>
+                    <Link
+                        href="/signup"
+                        className="group flex h-10 w-10 items-center justify-center rounded-full border-2 border-background bg-foreground text-background transition-all duration-500 ease-in-out hover:w-32"
+                    >
+                        <span className="transition-opacity duration-250 group-hover:opacity-0">
+                            <Plus className="h-4 w-4" />
                         </span>
-                        <span className="hidden whitespace-nowrap text-xs font-semibold group-hover:block">
+
+                        <span className="absolute whitespace-nowrap text-xs font-semibold opacity-0 transition-opacity duration-250 group-hover:opacity-100 group-hover:delay-200">
                             it could be you!
                         </span>
                     </Link>
