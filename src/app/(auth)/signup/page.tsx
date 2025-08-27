@@ -12,6 +12,7 @@ import {
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { ArrowLeft } from "lucide-react";
 
 
 export const metadata: Metadata = {
@@ -21,13 +22,22 @@ export const metadata: Metadata = {
 
 export default function SignUp() {
     return (
-        <main className="flex min-h-screen items-center justify-center p-4">
+        <main className="flex min-h-screen flex-col items-center justify-center p-4">
             <div className="absolute inset-0 -z-10 h-full w-full">
                 <div className="absolute inset-0 bg-violet-100 bg-[radial-gradient(ellipse_at_center,transparent_40%,theme(colors.neutral.100))] dark:bg-neutral-900 dark:bg-[radial-gradient(ellipse_at_center,transparent_40%,theme(colors.neutral.900))]"></div>
                 <div className="absolute inset-0 bg-[radial-gradient(theme(colors.neutral.300)_1px,transparent_1px)] bg-size-[20px_20px] dark:bg-[radial-gradient(theme(colors.neutral.700)_1px,transparent_1px)]"></div>
             </div>
-            <div className="flex flex-col items-center gap-4">
-                <Card className="w-full max-w-sm bg-violet-50">
+            <div className="flex w-full max-w-sm flex-col gap-4">
+                <div className="flex justify-start -mt-11">
+                    <Button asChild variant="ghost" className="text-sm text-muted-foreground hover:bg-transparent hover:text-foreground">
+                        <Link href="/">
+                            <ArrowLeft className="mr-1 h-2 w-2" />
+                            Back to home
+                        </Link>
+                    </Button>
+                </div>
+
+                <Card className="w-full max-w-sm bg-violet-50 -mt-2">
                     <CardHeader>
                         <CardTitle className="text-2xl">Create an account.</CardTitle>
                         <CardDescription>
@@ -70,6 +80,7 @@ export default function SignUp() {
                     <Button type="submit" className="w-full">
                         Create account
                     </Button> */}
+
                     </CardContent>
                     <CardFooter>
                         <p className="w-full text-center text-sm text-muted-foreground">
@@ -80,7 +91,8 @@ export default function SignUp() {
                         </p>
                     </CardFooter>
                 </Card>
-                <p className="max-w-md px-8 text-xs text-muted-foreground">
+
+                <p className="max-w-md px-4 text-center text-xs text-muted-foreground">
                     By signing up, you agree to our{" "}
                     <Link
                         href="/terms"
