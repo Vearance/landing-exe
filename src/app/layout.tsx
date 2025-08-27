@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { geistSans, poppins, inter, sfpro } from '@/lib/fonts';
 import { cn } from '@/lib/utils';
 import "./globals.css";
+import Providers from "@/components/providers";
 
 export const metadata: Metadata = {
   title: {
@@ -98,7 +99,9 @@ export default function RootLayout({
           'font-normal antialiased',
         )}
       >
+        <Providers>
         {children}
+        </Providers>
       </body>
     </html>
   );
