@@ -18,19 +18,19 @@ export function Hero() {
             </p>
 
             <div className="flex flex-col items-center gap-4 sm:flex-row">
-                <Link href="/signup">
-                    <Button size="lg" className="group">
+                <Button size="lg" className="group" asChild>
+                    <Link href="/signup">
                         Get Started - it's free
                         <ChevronRight className="transform rotate-45 transition-all duration-300 group-hover:translate-x-1 group-hover:-translate-y-1 w-3 h-3 sm:w-4 sm:h-4" />
-                    </Button>
-                </Link>
+                    </Link>
+                </Button>
             </div>
             <div className="flex flex-col mt-1 items-center sm:flex-row">
-                <Link href="/learn-more">
-                    <Button size="lg" variant="link" className="text-neutral-500">
+                <Button size="lg" variant="link" className="text-neutral-500" asChild>
+                    <Link href="/learn-more">
                         Learn more
-                    </Button>
-                </Link>
+                    </Link>
+                </Button>
             </div>
 
 

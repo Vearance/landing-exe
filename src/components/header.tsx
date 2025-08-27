@@ -120,15 +120,15 @@ export function Header() {
                 </NavigationMenu>
 
                 <div className="flex items-center gap-2">
-                    <Link href="/login">
-                        <Button variant="ghost">Log in</Button>
-                    </Link>
-                    <Link href="/signup">
-                        <Button>
+                    <Button variant="ghost" asChild>
+                        <Link href="/login">Log in</Link>
+                    </Button>
+                    <Button asChild>
+                        <Link href="/signup">
                             Sign up
                             <ArrowUpRight className="ml-2 h-4 w-4" />
-                        </Button>
-                    </Link>
+                        </Link>
+                    </Button>
                 </div>
             </div>
         </header>
