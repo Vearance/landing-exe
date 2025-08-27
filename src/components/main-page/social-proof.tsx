@@ -40,7 +40,7 @@ export function SocialProof() {
 
             <div className="justify-center flex items-center gap-2 mt-8 mb-10">
                 <p className="text-sm text-neutral-600">
-                    Built with love by <span className="font-semibold text-foreground">piowsee</span>
+                    Built with love by <span className="font-semibold text-foreground">piowsee.ai</span>
                 </p>
                 <Image src="/logo-192.png" alt="Piowsee Logo" width={20} height={20} className="h-5 w-5" />
             </div>

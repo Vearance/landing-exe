@@ -40,11 +40,11 @@ export function Header() {
     return (
         <header
             className={cn(
-                "sticky top-0 z-50 w-full border-b backdrop-blur-sm transition-transform duration-300",
+                "fixed top-0 z-50 w-full border-b bg-violet-50/70 backdrop-blur-sm transition-transform duration-300",
                 scrollDirection === "down" ? "-translate-y-full" : "translate-y-0"
             )}
         >
-            <div className="container mx-auto flex h-16 max-w-7xl items-center justify-between px-4">
+            <div className="relative container mx-auto flex h-16 max-w-7xl items-center justify-between px-4">
                 <Link href="/" className="flex items-center gap-3">
                     <Image
                         src="/logo-192.png"
@@ -55,7 +55,7 @@ export function Header() {
                     <span className="text-lg font-bold">LandingAI</span>
                 </Link>
 
-                <NavigationMenu className="hidden md:flex">
+                <NavigationMenu className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 hidden md:flex">
                     <NavigationMenuList className="gap-12">
 
                         <NavigationMenuItem>
@@ -101,7 +101,10 @@ export function Header() {
                         </NavigationMenuItem>
 
                         <NavigationMenuItem>
-                            <NavigationMenuLink asChild>
+                            <NavigationMenuLink asChild className='inline-flex h-auto items-center justify-center bg-transparent p-0
+                                font-medium text-muted-foreground transition-colors hover:bg-transparent hover:text-foreground
+                                focus:text-muted-foreground focus:bg-transparent focus:outline-none'
+                            >
                                 <Link href="/#pricing" className="flex items-center gap-1 text-sm font-medium text-muted-foreground transition-colors hover:bg-transparent hover:text-foreground active:bg-transparent">
                                     Pricing
                                 </Link>
@@ -109,7 +112,10 @@ export function Header() {
                         </NavigationMenuItem>
 
                         <NavigationMenuItem>
-                            <NavigationMenuLink asChild>
+                            <NavigationMenuLink asChild className='inline-flex h-auto items-center justify-center bg-transparent p-0
+                                font-medium text-muted-foreground transition-colors hover:bg-transparent hover:text-foreground
+                                focus:text-muted-foreground focus:bg-transparent focus:outline-none'
+                            >
                                 <Link href="/#faq" className="flex items-center gap-1 text-sm font-medium text-muted-foreground transition-colors hover:bg-transparent hover:text-foreground active:bg-transparent">
                                     FAQ
                                 </Link>
