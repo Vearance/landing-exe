@@ -1,7 +1,7 @@
 import { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { GoogleButton } from "@/components/google-button";
 import {
     Card,
     CardContent,
@@ -47,18 +47,7 @@ export default function Login() {
                     </CardHeader>
                     <CardContent className="grid gap-4">
                         <div className="grid grid-cols-1 gap-6">
-                            <Button variant="outline" className="bg-violet-50 hover:bg-neutral-50" asChild>
-                                <Link href="#">
-                                    <Image
-                                        src="/icons/google.svg"
-                                        alt="Google"
-                                        width={20}
-                                        height={20}
-                                        className="mr-2"
-                                    />
-                                    Google
-                                </Link>
-                            </Button>
+                            <GoogleButton />
                         </div>
                         {/* <div className="relative">
                         <div className="absolute inset-0 flex items-center">
