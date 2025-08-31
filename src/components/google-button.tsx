@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { signIn} from "@/lib/auth-client";
+import { signIn } from "@/lib/auth-client";
 
 export function GoogleButton() {
     const handleGoogleSignIn = async () => {
@@ -29,7 +29,7 @@ export function GoogleButton() {
              * disable the automatic redirect to the provider.
              * @default false
              */
-            disableRedirect: true,
+            disableRedirect: false,
         });
     };
 
