@@ -7,9 +7,9 @@ export function SocialProof() {
         <section className="container mx-auto max-w-7xl flex flex-col items-center px-4">
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-2">
                 <div className="flex -space-x-4">
-                    <Image src="/images/user.png" alt="1" width={40} height={40} className="rounded-full border-2 border-background" />
-                    <Image src="/images/user.png" alt="2" width={40} height={40} className="rounded-full border-2 border-background" />
-                    <Image src="/images/user.png" alt="3" width={40} height={40} className="rounded-full border-2 border-background" />
+                    <Image src="/images/user1.png" alt="1" width={40} height={40} className="rounded-full border-2 border-background" />
+                    <Image src="/images/user2.png" alt="2" width={40} height={40} className="rounded-full border-2 border-background" />
+                    <Image src="/images/user3.png" alt="3" width={40} height={40} className="rounded-full border-2 border-background" />
 
                     <Link
                         href="/signup"

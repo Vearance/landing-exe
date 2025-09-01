@@ -1,10 +1,15 @@
+import { auth } from "@/lib/auth";
+import { headers } from "next/headers";
+
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { Hero } from "@/components/main-page/hero";
 import { SocialProof } from "@/components/main-page/social-proof";
 import { Faq } from "@/components/main-page/faq";
 
-export default function Home() {
+export default async function Home() {
+  const session = await auth.api.getSession({ headers: await headers() });
+
   return (
     <main className="relative min-h-screen pt-16 text-foreground">
       <div className="absolute inset-0 -z-10 h-full w-full">
@@ -12,7 +17,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-[radial-gradient(theme(colors.neutral.300)_1px,transparent_1px)] bg-size-[20px_20px] dark:bg-[radial-gradient(theme(colors.neutral.700)_1px,transparent_1px)]"></div>
       </div>
 
-      <Header />
+      <Header session={session} />
       <Hero />
       <SocialProof />
       <Faq />

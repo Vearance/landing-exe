@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useSession } from "@/lib/auth-client";
 import {
     DropdownMenu,
     DropdownMenuContent,
@@ -11,15 +10,16 @@ import {
     DropdownMenuSeparator,
     DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Avatar } from "@/components/ui/avatar";
 import { LogoutButton } from "@/components/logout-button";
 import { Button } from "@/components/ui/button";
+import type { SessionData } from "@/types/session";
 
-export function ProfileDropdown() {
-    const { data: session } = useSession();
+// interface ProfileDropdownProps {
+//     session: SessionData["session"] | null;
+// }
 
-    console.log("Session object:", session);
-
+export function ProfileDropdown({ session }: SessionData) {
     if (!session) return null;
 
     return (
