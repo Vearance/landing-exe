@@ -72,7 +72,7 @@ export function Header() {
                                 Features
                             </NavigationMenuTrigger>
 
-                            <NavigationMenuContent>
+                            <NavigationMenuContent className="bg-violet-50">
                                 <ul className="grid w-[300px]">
                                     <li>
                                         <NavigationMenuLink
