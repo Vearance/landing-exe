@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { CheckCircle2, XCircle } from "lucide-react"
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 
@@ -55,11 +56,11 @@ export function Newsletter() {
                     product updates.
                 </p>
 
-                {!success ? (
-                    <form
-                        onSubmit={handleSubmit}
-                        className="mt-8 flex flex-col items-center gap-2 sm:flex-row sm:justify-center"
-                    >
+                <form
+                    onSubmit={handleSubmit}
+                    className="relative mt-8 w-full max-w-md mx-auto"
+                >
+                    <div className="flex flex-col gap-1">
                         <Input
                             name="name"
                             type="text"
@@ -67,6 +68,7 @@ export function Newsletter() {
                             className="w-full max-w-xs rounded-lg bg-background px-4 py-3 text-sm"
                             required
                         />
+
                         <Input
                             name="email"
                             type="email"
@@ -75,19 +77,44 @@ export function Newsletter() {
                             required
                             pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
                         />
-                        <Button type="submit" className="rounded-lg" disabled={loading}>
+                        <Button type="submit" className="rounded-lg absolute top-1/2 -translate-y-1/2 right-2 px-6" disabled={loading}>
                             {loading ? "Subscribing..." : "Subscribe"}
                         </Button>
-                    </form>
-                ) : (
-                    <p className="mt-6 text-green-600">Thanks for subscribing!</p>
+
+                    </div>
+                </form>
+
+                {success && (
+                    <div className="mt-4 flex justify-center">
+                        <div className="relative flex items-center gap-2 text-sm font-medium text-green-600">
+                            <span className="absolute inset-y-1/2 left-0 right-0 h-[10px] -translate-y-1/2 bg-green-200 rounded"></span>
+
+                            <CheckCircle2 className="h-4 w-4 relative z-10" />
+                            <span className="relative z-10">
+                                Subscribed! You&apos;ll start getting updates soon 🎉
+                            </span>
+                        </div>
+                    </div>
                 )}
 
-                <p className="mt-3 text-xs text-muted-foreground">
+                {error && (
+                    <div className="mt-4 flex justify-center">
+                        <div className="relative flex items-center gap-2 text-sm font-medium text-red-600">
+                            <span className="absolute inset-y-1/2 left-0 right-0 h-[10px] -translate-y-1/2 bg-red-200 rounded"></span>
+
+                            <XCircle className="h-4 w-4 relative z-10" />
+                            <span className="relative z-10">{error}</span>
+                        </div>
+                    </div>
+                )}
+
+
+
+                <p className="mt-4 text-xs text-muted-foreground">
                     No spam. Unsubscribe anytime.
                 </p>
             </div>
 
-        </section>
+        </section >
     );
 }
