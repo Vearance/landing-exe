@@ -1,7 +1,7 @@
 "use client";
 
 import { signOut } from "@/lib/auth-client";
-import { Button } from "@/components/ui/button";
+// import { Button } from "@/components/ui/button";
 import { DropdownMenuItem } from "@/components/ui/dropdown-menu";
 import { useRouter } from "next/navigation";
 

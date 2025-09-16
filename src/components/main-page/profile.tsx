@@ -15,11 +15,11 @@ import { LogoutButton } from "@/components/logout-button";
 import { Button } from "@/components/ui/button";
 import type { SessionData } from "@/types/session";
 
-// interface ProfileDropdownProps {
-//     session: SessionData["session"] | null;
-// }
+interface ProfileDropdownProps {
+    session: SessionData["session"] | null;
+}
 
-export function ProfileDropdown({ session }: SessionData) {
+export function ProfileDropdown({ session }: ProfileDropdownProps) {
     if (!session) return null;
 
     return (
