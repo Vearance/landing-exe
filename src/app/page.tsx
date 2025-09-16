@@ -4,6 +4,7 @@ import { headers } from "next/headers";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { Hero } from "@/components/main-page/hero";
+import { Newsletter } from "@/components/main-page/newsletter";
 import { SocialProof } from "@/components/main-page/social-proof";
 import { Faq } from "@/components/main-page/faq";
 
@@ -21,6 +22,7 @@ export default async function Home() {
       <Hero />
       <SocialProof />
       <Faq />
+      <Newsletter />
       <Footer />
     </main>
   );
